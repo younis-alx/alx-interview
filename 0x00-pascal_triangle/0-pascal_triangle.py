@@ -9,9 +9,9 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = [[] for _ in range(n + 1)]
+    triangle = [[] for _ in range(n)]
 
-    for row in range(n + 1):
+    for row in range(n):
         for col in range(row + 1):
             if col == 0 or col == row:
                 triangle[row].append(1)
