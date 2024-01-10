@@ -8,21 +8,13 @@ Returns: Boolean
  O(n*m)
 """
 
-
 def canUnlockAll(boxes):
     """
     returns boolean whether all boxes can be opened
     """
-    if not boxes:
-        return True
-    visited = set()
-    queue = [0]
-    while queue:
-        box = queue.pop(0)
-        if box in visited:
-            continue
-        visited.add(box)
-        for key in boxes[box]:
-            if key not in visited:
-                queue.append(key)
-    return len(visited) == len(boxes)
+    keys = [0]
+    for key in keys:
+        for new_key in boxes[key]:
+            if new_key not in keys and new_key < len(boxes):
+                keys.append(new_key)
+    return len(keys) == len(boxes)
