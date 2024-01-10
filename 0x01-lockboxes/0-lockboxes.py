@@ -5,7 +5,7 @@ Checks if all locks has corresponding keys
 @boxes: list of lists
 
 Returns: Boolean
- O(n+m)
+ O(n*m)
 """
 
 
