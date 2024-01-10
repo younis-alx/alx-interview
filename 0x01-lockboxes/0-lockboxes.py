@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Checks if all locks has corresponding keys
 @boxes: list of lists
@@ -21,3 +22,4 @@ def canUnlockAll(boxes):
             if key not in visited:
                 queue.append(key)
     return len(visited) == len(boxes)
+
