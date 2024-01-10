@@ -9,6 +9,9 @@ Returns: Boolean
 
 
 def canUnlockAll(boxes):
+    """
+    returns boolean whether all boxes can be opened
+    """
     visited = set()
     queue = [0]
     while queue:
