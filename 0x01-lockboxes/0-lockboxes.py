@@ -8,6 +8,7 @@ Returns: Boolean
  O(n*m)
 """
 
+
 def canUnlockAll(boxes):
     """
     returns boolean whether all boxes can be opened
