@@ -7,13 +7,23 @@ In a text file, there is a single character H.
 
 
 def minOperations(n):
-    '''
-    This method initializes a list
-    dp to store the minimum number of operations for each number up to n
-    '''
-    dp = [0] + [float('inf')] * n
-    for i in range(1, n + 1):
-        for j in range(1, i // 2 + 1):
-            if i % j == 0:
-                dp[i] = min(dp[i], dp[j] + i // j)
-    return dp[n] if n > 1 else 0
+    """
+    minOperations
+    Gets fewest # of operations needed to result in exactly n H characters
+    """
+
+    if (n < 2):
+        return 0
+    ops, root = 0, 2
+    while root <= n:
+
+        if n % root == 0:
+
+            ops += root
+
+            n = n / root
+
+            root -= 1
+
+        root += 1
+    return ops
