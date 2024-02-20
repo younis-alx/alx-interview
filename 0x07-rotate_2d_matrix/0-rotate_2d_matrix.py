@@ -11,7 +11,7 @@ def rotate_2d_matrix(matrix):
         return
     if len(matrix) <= 0:
         return
-    if not all(map(lambda x: isinstance(x, list), matrix)):
+    if not all(map(lambda x: type(x) == list, matrix)):
         return
     rows = len(matrix)
     cols = len(matrix[0])
